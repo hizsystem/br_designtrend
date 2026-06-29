@@ -23,7 +23,7 @@
   .wm {
     position: absolute; z-index: 0; right: -4vw; bottom: 2vh; margin: 0;
     font-family: var(--font-display); font-weight: 600; font-size: 58vw; line-height: .8;
-    color: transparent; -webkit-text-stroke: 2px rgba(255,106,26,.10); pointer-events: none;
+    color: transparent; -webkit-text-stroke: 2px rgba(65,150,236,.12); pointer-events: none;
   }
   .eyebrow2 { font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--accent); margin: 0 0 12px; }
   .ctitle { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 8.4vw, 40px); line-height: 1.16; letter-spacing: -.02em; margin: 0; }
@@ -31,7 +31,7 @@
   .clist li { font-family: 'SUITE Variable', sans-serif; font-size: 17px; line-height: 1.5; padding-left: 23px; position: relative; color: var(--ink); }
   .clist li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
   .clist li strong { font-weight: 800; }
-  .ctake { margin-top: 22px; background: #fff2e8; border-left: 4px solid var(--accent); padding: 14px 17px; border-radius: 0 12px 12px 0; font-family: 'SUITE Variable', sans-serif; font-size: 16px; line-height: 1.55; }
+  .ctake { margin-top: 22px; background: #EAF2FD; border-left: 4px solid var(--accent); padding: 14px 17px; border-radius: 0 12px 12px 0; font-family: 'SUITE Variable', sans-serif; font-size: 16px; line-height: 1.55; }
   .ctake b { color: var(--accent); }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
   .chip { display: inline-flex; align-items: center; gap: 7px; font-family: 'SUITE Variable', sans-serif; font-size: 13px; padding: 6px 12px; background: #fff; border: 1px solid var(--line); border-radius: 999px; }
@@ -41,16 +41,16 @@
   .card-credit a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
 
   /* 표지 / 마지막 카드 — 그라데이션 히어로 */
-  .cover { background: linear-gradient(160deg, #fff3ea 0%, #ffe9dc 55%, #ffe6d8 100%); }
+  .cover { background: linear-gradient(160deg, #EDF3FC 0%, #E3EEFB 55%, #DCE8FA 100%); }
   .cover .kicker { font-size: 14px; font-weight: 700; letter-spacing: .04em; color: var(--accent); margin: 0 0 16px; }
   .cover h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(34px, 10vw, 52px); line-height: 1.12; letter-spacing: -.025em; margin: 0; }
   .cover .meta { margin-top: 24px; font-family: 'SUITE Variable', sans-serif; color: var(--muted); font-size: 15px; }
   .cover .swipe { margin-top: 30px; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--accent); font-weight: 700; animation: nudge 1.4s ease-in-out infinite; }
   @keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(7px); } }
-  .outro { background: linear-gradient(160deg, #ffe6d8 0%, #ffe9dc 50%, #fff3ea 100%); text-align: center; }
+  .outro { background: linear-gradient(160deg, #DCE8FA 0%, #E3EEFB 50%, #EDF3FC 100%); text-align: center; }
   .outro h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 8vw, 36px); margin: 0 0 18px; letter-spacing: -.02em; }
   .outro p { font-family: 'SUITE Variable', sans-serif; color: var(--muted); font-size: 16px; margin: 0 0 26px; }
-  .outro a.btn { display: inline-block; background: linear-gradient(120deg,#ff7a1a,#ff5e3a,#ff9f1c,#ff5e3a,#ff7a1a); background-size: 300% 100%; animation: ctaFlow 7s ease infinite; color: #fff; text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 18px; padding: 16px 34px; border-radius: 999px; box-shadow: 0 14px 36px -12px rgba(255,106,26,.6); }
+  .outro a.btn { display: inline-block; background: linear-gradient(120deg,#4196EC,#2f74d6,#364467,#2f74d6,#4196EC); background-size: 300% 100%; animation: ctaFlow 7s ease infinite; color: #fff; text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 18px; padding: 16px 34px; border-radius: 999px; box-shadow: 0 14px 36px -12px rgba(65,150,236,.55); }
 
   .brandtag { position: absolute; left: 28px; bottom: calc(64px + env(safe-area-inset-bottom)); z-index: 2; font-family: 'SUITE Variable', sans-serif; font-size: 12px; color: var(--muted); }
 
