@@ -29,11 +29,10 @@
 
   <h1 class="hero-mega"><span>DESIGN</span><span>TREND</span></h1>
 
-  <figure class="hero-card">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/76ebc4251637479.6a3b8aaa2193c.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()">
-  </figure>
-
-  <a id="todayBtn" class="btn-today hero-cta" href="#">오늘 트렌드 보기</a>
+  <a class="hero-card" id="todayCard" href="#" aria-label="오늘 트렌드 보기">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/76ebc4251637479.6a3b8aaa2193c.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+    <span class="hero-card-label">오늘 트렌드 보기 <b>→</b></span>
+  </a>
 </section>
 
 <main class="wrap">
@@ -61,18 +60,26 @@ const issueByDate = new Map(ISSUES.map(i => [i.date, i]));
 const pad = n => String(n).padStart(2, "0");
 const todayStr = (() => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; })();
 
-// 오늘 버튼
+// 메인비주얼 사진 클릭 → 오늘자(없으면 최신) 리포트로
 (function renderToday() {
-  const btn = document.getElementById("todayBtn");
+  const card = document.getElementById("todayCard");
+  if (!card) return;
+  const label = card.querySelector(".hero-card-label");
+  const img = card.querySelector("img");
   if (issueByDate.has(todayStr)) {
-    btn.href = `issues/${todayStr}.html`;
-    btn.textContent = "오늘 트렌드 보기";
+    card.href = `issues/${todayStr}.html`;
+    if (label) label.innerHTML = '오늘 트렌드 보기 <b>→</b>';
   } else if (ISSUES.length) {
-    btn.href = `issues/${ISSUES[0].date}.html`;
-    btn.textContent = `최신 트렌드 보기 (${ISSUES[0].date})`;
+    card.href = `issues/${ISSUES[0].date}.html`;
+    if (label) label.innerHTML = '최신 트렌드 보기 <b>→</b>';
   } else {
-    btn.classList.add("is-disabled");
-    btn.textContent = "아직 리포트가 없어요 — 채팅에 /디자인트렌드 라고 불러주세요";
+    card.removeAttribute("href");
+    if (label) label.textContent = "아직 리포트가 없어요";
+  }
+  // 사진은 최신 호 대표 이미지로 자동 동기화
+  if (img && ISSUES.length && ISSUES[0].cover) {
+    img.src = ISSUES[0].cover;
+    img.style.display = "";
   }
 })();
 
