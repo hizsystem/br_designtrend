@@ -6,27 +6,38 @@
 <title>디자인 트렌드 리포트</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Funnel+Display:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <span class="drift drift-1">Design Trend.</span>
-    <span class="drift drift-2">Design Trend.</span>
-    <span class="drift drift-3">Design Trend.</span>
-  </div>
-  <div class="hero-inner">
-    <p class="eyebrow">매일 만나는 디자인 트렌드, 쉽게</p>
-    <h1>오늘의 디자인 트렌드</h1>
-    <p class="hero-sub">디자인을 잘 몰라도 괜찮아요. 버튼을 눌러 오늘의 흐름을 쉽게 확인해 보세요!</p>
-    <a id="todayBtn" class="btn-today" href="#">오늘 트렌드 보기</a>
-  </div>
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
+
+  <header class="hero-top">
+    <a class="hero-badge" href="#top" aria-label="디자인 트렌드 리포트">
+      <svg class="badge-spin" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="badgeCirc" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+        <text><textPath href="#badgeCirc">DESIGN · TREND · DESIGN · TREND · </textPath></text>
+      </svg>
+      <span class="badge-dot" aria-hidden="true">✦</span>
+    </a>
+    <p class="hero-tag">매일 만나는 디자인 트렌드, 쉽게</p>
+    <a class="hero-past" href="#past">지난 호 ↓</a>
+  </header>
+
+  <h1 class="hero-mega"><span>DESIGN</span><span>TREND</span></h1>
+
+  <figure class="hero-card">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/76ebc4251637479.6a3b8aaa2193c.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()">
+  </figure>
+
+  <a id="todayBtn" class="btn-today hero-cta" href="#">오늘 트렌드 보기</a>
 </section>
 
 <main class="wrap">
-  <section class="past-section">
+  <section class="past-section" id="past">
     <h2>지난 트렌드 보기</h2>
     <div class="photo-cal">
       <div class="pcal-head">
